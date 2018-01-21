@@ -12,6 +12,8 @@ RUN apt-get update && \
 EXPOSE 53/tcp 53/udp
 
 VOLUME /etc/bind
-VOLUME /var/lib/bind
+VOLUME /var/cache/bind
+
+ADD docker-entrypoint.d/ /run/docker-entrypoint.d/
 
 CMD ["/usr/sbin/named", "-f", "-u", "bind"]
