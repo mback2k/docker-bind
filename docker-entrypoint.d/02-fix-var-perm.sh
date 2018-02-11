@@ -9,3 +9,5 @@ chmod 0640 /var/cache/bind/db.*
 
 chown bind:bind /var/cache/bind/db.*.jnl
 chmod 0644 /var/cache/bind/db.*.jnl
+
+exit 0
